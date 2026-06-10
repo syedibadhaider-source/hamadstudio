@@ -709,7 +709,6 @@ body.tag .bottom-area {
 	  	  	}
     </style>
 <!--  Single Blog Image Size -->
-
 <style>
 .custom-hero-wrapper {
     background: radial-gradient(circle at top left, #dde4ff 0%, transparent 40%),
@@ -914,7 +913,7 @@ body.tag .bottom-area {
     .bottom-text { grid-template-columns: 1fr; }
 }
 </style>
-</head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/></head>
 <body class="home wp-singular page-template page-template-elementor_header_footer page page-id-16364 wp-theme-fluxi ehf-header ehf-footer ehf-template-fluxi ehf-stylesheet-fluxi elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-16364">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
@@ -1112,8 +1111,6 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 </div>
 </div>
 </nav>
-
-
 <div class="custom-hero-wrapper">
 <header class="custom-header">
 <div class="logo">
@@ -1136,9 +1133,9 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 <div class="badge">
 <div class="icon">i</div> About Us
         </div>
-<h1>For Those Who Value<br/>Unique Perspectives.</h1>
-<p class="subtitle">Our AI solutions help you write smarter, increase productivity, and improve clarity—all while staying simple.</p>
-<div class="hero-grid">
+<h1 data-aos="fade-up">For Those Who Value<br/>Unique Perspectives.</h1>
+<p class="subtitle" data-aos="fade-up" data-aos-delay="100">Our AI solutions help you write smarter, increase productivity, and improve clarity—all while staying simple.</p>
+<div class="hero-grid" data-aos="fade-up" data-aos-delay="200">
 <div class="large-img">
 <img alt="Hero Image 1" src="./assets/hero1.png"/>
 </div>
@@ -1160,7 +1157,7 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 </div>
 </div>
 </div>
-<div class="bottom-text">
+<div class="bottom-text" data-aos="fade-up" data-aos-delay="300">
 <h3>Innovative Ideas Can<br/>Boost Sales Growth.</h3>
 <div class="text-content">
 <p>A strong idea can spark rapid sales growth by uncovering hidden opportunities, optimizing processes, or changing how teams connect with potential clients.</p>
@@ -1173,7 +1170,6 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 <div class="container-full-width">
 <div id="content">
 <div class="elementor elementor-16364" data-elementor-id="16364" data-elementor-post-type="page" data-elementor-type="wp-page">
-
 <div class="elementor-element elementor-element-b8b4a95 e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="b8b4a95">
 <div class="e-con-inner">
 <div class="elementor-element elementor-element-fd4928f e-con-full e-flex e-con e-child" data-element_type="container" data-id="fd4928f">
@@ -2964,6 +2960,37 @@ const a=JSON.parse(document.getElementById(&#34;wp-emoji-settings&#34;).textCont
     </script>
 <script>
       (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement(&#39;script&#39;);d.innerHTML=&#34;window.__CF$cv$params={r:&#39;a09bae163e68803d&#39;,t:&#39;MTc4MTEyOTE1Mg==&#39;};var a=document.createElement(&#39;script&#39;);a.src=&#39;/cdn-cgi/challenge-platform/scripts/jsd/main.js&#39;;document.getElementsByTagName(&#39;head&#39;)[0].appendChild(a);&#34;;b.getElementsByTagName(&#39;head&#39;)[0].appendChild(d)}}if(document.body){var a=document.createElement(&#39;iframe&#39;);a.height=1;a.width=1;a.style.position=&#39;absolute&#39;;a.style.top=0;a.style.left=0;a.style.border=&#39;none&#39;;a.style.visibility=&#39;hidden&#39;;document.body.appendChild(a);if(&#39;loading&#39;!==document.readyState)c();else if(window.addEventListener)document.addEventListener(&#39;DOMContentLoaded&#39;,c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);&#39;loading&#39;!==document.readyState&amp;&amp;(document.onreadystatechange=e,c())}}}})();
+    </script>
+
+<!-- Lenis Smooth Scroll -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+<!-- AOS Scroll Animations -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+      // Initialize Lenis
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+      })
+
+      function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+      }
+      requestAnimationFrame(raf)
+
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 50,
+      });
     </script>
 </body>
 </html>
