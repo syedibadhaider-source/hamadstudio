@@ -913,7 +913,6 @@ body.tag .bottom-area {
     .bottom-text { grid-template-columns: 1fr; }
 }
 </style>
-
 <style id="fintech-css">
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -1208,7 +1207,88 @@ body.tag .bottom-area {
     .f-card-main, .f-card-phone { grid-column: span 1; }
     .fintech-nav { display: none; }
 }
-</style></head>
+</style>
+<style id="marquee-css">
+.logo-marquee-section {
+    background: #ffffff;
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+.logo-marquee-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+}
+.logo-marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+.logo-marquee-container::before,
+.logo-marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+}
+.logo-marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+.logo-marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+.logo-track {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+}
+.logo-track:hover {
+    animation-play-state: paused;
+}
+.logo-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px;
+    vertical-align: middle;
+}
+.logo-item img {
+    height: 28px;
+    width: auto;
+    filter: grayscale(100%) opacity(0.7);
+    transition: filter 0.3s ease;
+}
+.logo-item img:hover {
+    filter: grayscale(0%) opacity(1);
+}
+.text-logo {
+    font-size: 28px;
+    font-weight: 900;
+    font-family: monospace;
+    color: #1a1a2e;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+.text-logo:hover {
+    opacity: 1;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+@media (max-width: 768px) {
+    .logo-item { margin: 0 20px; }
+    .logo-item img { height: 20px; }
+    .text-logo { font-size: 20px; }
+}
+</style>
+</head>
 <body class="home wp-singular page-template page-template-elementor_header_footer page page-id-16364 wp-theme-fluxi ehf-header ehf-footer ehf-template-fluxi ehf-stylesheet-fluxi elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-16364">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
@@ -1406,8 +1486,6 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 </div>
 </div>
 </nav>
-
-
 <div class="fintech-wrapper">
 <!-- Header -->
 <header class="fintech-header">
@@ -1507,11 +1585,34 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 </div>
 </div>
 </div>
-<!-- 21.dev Logo Section -->
-<div class="dev21-banner">
-<span>Trusted &amp; Powered By</span>
-<div class="dev21-logo">21.dev</div>
+<div class="logo-marquee-section">
+<h2>Trusted by these companies</h2>
+<div class="logo-marquee-container">
+<div class="logo-track">
+<div class="logo-item"><img alt="Astro" src="https://www.shadcnblocks.com/images/block/logos/astro.svg"/></div>
+<div class="logo-item"><img alt="Figma" src="https://www.shadcnblocks.com/images/block/logos/figma.svg"/></div>
+<div class="logo-item"><img alt="Next.js" src="https://www.shadcnblocks.com/images/block/logos/nextjs.svg"/></div>
+<div class="logo-item"><img alt="React" src="https://www.shadcnblocks.com/images/block/logos/react.png"/></div>
+<div class="logo-item"><div class="text-logo">21.dev</div></div>
+<div class="logo-item"><img alt="shadcn/ui" src="https://www.shadcnblocks.com/images/block/logos/shadcn-ui.svg"/></div>
+<div class="logo-item"><img alt="Supabase" src="https://www.shadcnblocks.com/images/block/logos/supabase.svg"/></div>
+<div class="logo-item"><img alt="Tailwind CSS" src="https://www.shadcnblocks.com/images/block/logos/tailwind.svg"/></div>
+<div class="logo-item"><img alt="Vercel" src="https://www.shadcnblocks.com/images/block/logos/vercel.svg"/></div>
+<div class="logo-item"><img alt="Astro" src="https://www.shadcnblocks.com/images/block/logos/astro.svg"/></div>
+<div class="logo-item"><img alt="Figma" src="https://www.shadcnblocks.com/images/block/logos/figma.svg"/></div>
+<div class="logo-item"><img alt="Next.js" src="https://www.shadcnblocks.com/images/block/logos/nextjs.svg"/></div>
+<div class="logo-item"><img alt="React" src="https://www.shadcnblocks.com/images/block/logos/react.png"/></div>
+<div class="logo-item"><div class="text-logo">21.dev</div></div>
+<div class="logo-item"><img alt="shadcn/ui" src="https://www.shadcnblocks.com/images/block/logos/shadcn-ui.svg"/></div>
+<div class="logo-item"><img alt="Supabase" src="https://www.shadcnblocks.com/images/block/logos/supabase.svg"/></div>
+<div class="logo-item"><img alt="Tailwind CSS" src="https://www.shadcnblocks.com/images/block/logos/tailwind.svg"/></div>
+<div class="logo-item"><img alt="Vercel" src="https://www.shadcnblocks.com/images/block/logos/vercel.svg"/></div>
 </div>
+</div>
+</div>
+
+<!-- 21.dev Logo Section -->
+
 <div class="main-contain offcontents">
 <div class="container-full-width">
 <div id="content">
