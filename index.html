@@ -1288,7 +1288,6 @@ body.tag .bottom-area {
     .text-logo { font-size: 20px; }
 }
 </style>
-
 <style id="pricing-css">
 .pricing-section {
     background-color: #f4f5f9;
@@ -1419,6 +1418,99 @@ body.tag .bottom-area {
 
 @media (max-width: 992px) {
     .pricing-grid { grid-template-columns: 1fr; max-width: 450px; }
+}
+</style>
+
+<style id="crazy-animations-css">
+/* Scroll Pop Entrance */
+.scroll-pop {
+    opacity: 0;
+    transform: scale(0.8) translateY(50px);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.scroll-pop.is-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Continuous Floating / Spinning */
+@keyframes floatContinuous {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(3deg); }
+}
+.f-coin {
+    animation: floatContinuous 4s ease-in-out infinite;
+    filter: drop-shadow(0 20px 20px rgba(0,0,0,0.15));
+}
+
+@keyframes floatBadges {
+    0%, 100% { transform: translateY(0px) rotate(10deg); }
+    50% { transform: translateY(-10px) rotate(15deg); }
+}
+.f-badge-black {
+    animation: floatBadges 3s ease-in-out infinite;
+}
+
+@keyframes floatBadgesRed {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-8px) scale(1.05); }
+}
+.f-badge-red {
+    animation: floatBadgesRed 3.5s ease-in-out infinite;
+}
+
+/* Woman breathing animation */
+@keyframes subtleBreathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03) translateY(-5px); }
+}
+.f-card-digital img {
+    animation: subtleBreathe 5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+/* Pulsing Glow on Buttons */
+@keyframes pulseGlowLime {
+    0% { box-shadow: 0 0 0 0 rgba(200, 245, 96, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(200, 245, 96, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(200, 245, 96, 0); }
+}
+.btn-primary, .btn-lime, .f-try-now {
+    animation: pulseGlowLime 2s infinite;
+}
+
+@keyframes pulseGlowDark {
+    0% { box-shadow: 0 0 0 0 rgba(26, 26, 46, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(26, 26, 46, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(26, 26, 46, 0); }
+}
+.btn-dark {
+    animation: pulseGlowDark 2.5s infinite;
+}
+
+/* Avatar popping */
+.f-avatars .avatar, .f-contact-avatar {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.f-avatars .avatar:hover, .f-contact-avatar:hover {
+    transform: scale(1.3) translateY(-5px);
+    z-index: 10;
+}
+
+/* Background blob */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(200, 245, 96, 0.03) 0%, transparent 60%);
+    z-index: -1;
+    pointer-events: none;
+    animation: rotateBlob 20s linear infinite;
+}
+@keyframes rotateBlob {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 </style>
 </head>
@@ -1642,7 +1734,7 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 <!-- Hero Grid -->
 <div class="fintech-hero-grid">
 <!-- Top Left -->
-<div class="f-card f-card-main">
+<div class="f-card f-card-main scroll-pop" data-tilt="true" data-tilt-glare="true" data-tilt-max="5" data-tilt-max-glare="0.2" data-tilt-speed="400" style="transition-delay: 0.0s;">
 <h1>Control your<br/>finance<br/>future easily</h1>
 <p>Streamline your business's financial management with our intuitive, scalable SaaS platform. Designed for U.S. enterprises.</p>
 <div class="f-actions">
@@ -1663,11 +1755,11 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 </div>
 </div>
 <!-- Top Right -->
-<div class="f-card f-card-phone">
+<div class="f-card f-card-phone scroll-pop" data-tilt="true" data-tilt-glare="true" data-tilt-max="5" data-tilt-max-glare="0.2" data-tilt-speed="400" style="transition-delay: 0.1s;">
 <img alt="Banking App Phone" src="./assets/banking_phone.png"/>
 </div>
 <!-- Bottom Left -->
-<div class="f-card f-card-connect">
+<div class="f-card f-card-connect scroll-pop" data-tilt="true" data-tilt-glare="true" data-tilt-max="5" data-tilt-max-glare="0.2" data-tilt-speed="400" style="transition-delay: 0.2s;">
 <div class="f-card-header">
 <h4>Connect Easily</h4>
 <a href="#">See all</a>
@@ -1697,7 +1789,7 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 </div>
 </div>
 <!-- Bottom Middle -->
-<div class="f-card f-card-digital">
+<div class="f-card f-card-digital scroll-pop" data-tilt="true" data-tilt-glare="true" data-tilt-max="5" data-tilt-max-glare="0.2" data-tilt-speed="400" style="transition-delay: 0.30000000000000004s;">
 <h4>Digital Banking<br/>Platform!</h4>
 <div class="f-digital-content">
 <div class="f-try-now">TRY NOW</div>
@@ -1705,7 +1797,7 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 </div>
 </div>
 <!-- Bottom Right -->
-<div class="f-card f-card-grow">
+<div class="f-card f-card-grow scroll-pop" data-tilt="true" data-tilt-glare="true" data-tilt-max="5" data-tilt-max-glare="0.2" data-tilt-speed="400" style="transition-delay: 0.4s;">
 <div class="f-badges">
 <span class="f-badge-red">Top rated App</span>
 <span class="f-badge-black">Revolutionary</span>
@@ -1750,7 +1842,7 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 </div>
 <div class="pricing-grid">
 <!-- Starter Card -->
-<div class="pricing-card">
+<div class="pricing-card scroll-pop" data-tilt="true" data-tilt-glare="true" data-tilt-max="5" data-tilt-max-glare="0.2" data-tilt-speed="400" style="transition-delay: 0.0s;">
 <div class="p-tier">Starter</div>
 <div class="p-price">$600<span>/project</span></div>
 <div class="p-desc">Perfect for small businesses and personal brands looking to establish an online presence.</div>
@@ -1764,7 +1856,7 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 <a class="p-btn btn-dark" href="#">Get Started</a>
 </div>
 <!-- Professional Card -->
-<div class="pricing-card popular">
+<div class="pricing-card popular scroll-pop" data-tilt="true" data-tilt-glare="true" data-tilt-max="5" data-tilt-max-glare="0.2" data-tilt-speed="400" style="transition-delay: 0.15s;">
 <div class="popular-badge">Most Popular</div>
 <div class="p-tier">Professional</div>
 <div class="p-price">$900<span>/project</span></div>
@@ -1779,7 +1871,7 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 <a class="p-btn btn-lime" href="#">Choose Professional</a>
 </div>
 <!-- Enterprise Card -->
-<div class="pricing-card">
+<div class="pricing-card scroll-pop" data-tilt="true" data-tilt-glare="true" data-tilt-max="5" data-tilt-max-glare="0.2" data-tilt-speed="400" style="transition-delay: 0.3s;">
 <div class="p-tier">Enterprise</div>
 <div class="p-price">$1200<span>/project</span></div>
 <div class="p-desc">The ultimate package with complete brand identity and cutting-edge digital experiences.</div>
@@ -1794,7 +1886,6 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 </div>
 </div>
 </section>
-
 <!-- 21.dev Logo Section -->
 <div class="main-contain offcontents">
 <div class="container-full-width">
@@ -3593,5 +3684,29 @@ const a=JSON.parse(document.getElementById(&#34;wp-emoji-settings&#34;).textCont
     </script>
 <!-- Lenis Smooth Scroll -->
 <!-- AOS Scroll Animations -->
+
+<!-- Vanilla Tilt JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<script id="crazy-animations-script">
+document.addEventListener("DOMContentLoaded", function() {
+    // Intersection Observer for scroll pop-ups
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Optional: stop observing once animated
+                // observer.unobserve(entry.target); 
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    document.querySelectorAll('.scroll-pop').forEach((el) => {
+        observer.observe(el);
+    });
+});
+</script>
 </body>
 </html>
