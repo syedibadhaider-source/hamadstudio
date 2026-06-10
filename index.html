@@ -709,6 +709,211 @@ body.tag .bottom-area {
 	  	  	}
     </style>
 <!--  Single Blog Image Size -->
+
+<style>
+.custom-hero-wrapper {
+    background: radial-gradient(circle at top left, #dde4ff 0%, transparent 40%),
+                radial-gradient(circle at top right, #e2daff 0%, transparent 40%),
+                #f8f9fc;
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+}
+.custom-hero-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(#d3dfff 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+    z-index: 0;
+}
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: relative;
+    z-index: 10;
+}
+.custom-header .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1a1a2e;
+}
+.custom-header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #ffffff;
+    padding: 8px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.custom-header nav a {
+    text-decoration: none;
+    color: #4a4a68;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.custom-header nav a:hover {
+    color: #614CE1;
+}
+.custom-header .buy-btn {
+    background: #1a1a2e;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+.custom-hero {
+    text-align: center;
+    max-width: 1100px;
+    margin: 60px auto 0;
+    position: relative;
+    z-index: 10;
+    padding: 0 5%;
+}
+.badge {
+    background: #ffffff;
+    color: #1a1a2e;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.badge .icon {
+    background: #614CE1;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-style: italic;
+    font-family: serif;
+}
+.custom-hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+.custom-hero p.subtitle {
+    font-size: 16px;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+}
+.hero-grid .large-img {
+    border-radius: 24px;
+    overflow: hidden;
+    height: 100%;
+}
+.hero-grid .large-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-grid .small-img {
+    border-radius: 24px;
+    overflow: hidden;
+    height: 220px;
+}
+.hero-grid .small-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-grid .stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.stat-card {
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 220px;
+}
+.stat-card.purple {
+    background: linear-gradient(135deg, #7c68fc 0%, #4c8cfc 100%);
+    color: white;
+}
+.stat-card.white {
+    background: white;
+    color: #1a1a2e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.stat-card .label {
+    font-size: 11px;
+    opacity: 0.8;
+    margin-bottom: auto;
+    line-height: 1.4;
+}
+.stat-card .value {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.stat-card .desc {
+    font-size: 13px;
+    font-weight: 600;
+}
+.bottom-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+    text-align: left;
+    align-items: center;
+}
+.bottom-text h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.2;
+}
+.bottom-text .text-content {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+.bottom-text .text-content p {
+    margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+    .custom-header nav { display: none; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-grid .stats-row { grid-template-columns: 1fr; }
+    .bottom-text { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body class="home wp-singular page-template page-template-elementor_header_footer page page-id-16364 wp-theme-fluxi ehf-header ehf-footer ehf-template-fluxi ehf-stylesheet-fluxi elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-16364">
 <!-- Google Tag Manager (noscript) -->
@@ -907,385 +1112,68 @@ src="https://www.facebook.com/tr?id=1512497416537504&amp;ev=PageView&amp;noscrip
 </div>
 </div>
 </nav>
-<header class="header-style-1 mainsmenu" id="reactheme-header">
-<div class="header-inner menu-sticky">
-<div class="elementor elementor-55" data-elementor-id="55" data-elementor-post-type="elementor-hf" data-elementor-type="wp-post">
-<div class="elementor-element elementor-element-5a75c69 e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="5a75c69">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-225cd14 e-con-full e-flex e-con e-child" data-element_type="container" data-id="225cd14">
-<div class="elementor-element elementor-element-9741273 elementor-widget elementor-widget-site-logo" data-element_type="widget" data-id="9741273" data-settings='{"align":"left","width":{"unit":"%","size":76,"sizes":[]},"width_tablet":{"unit":"%","size":78,"sizes":[]},"width_mobile":{"unit":"%","size":82,"sizes":[]},"image_border_radius":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"image_border_radius_tablet":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"image_border_radius_mobile":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"caption_padding":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"caption_padding_tablet":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"caption_padding_mobile":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"caption_space":{"unit":"px","size":0,"sizes":[]},"caption_space_tablet":{"unit":"px","size":"","sizes":[]},"caption_space_mobile":{"unit":"px","size":"","sizes":[]}}' data-widget_type="site-logo.default">
-<div class="elementor-widget-container">
-<div class="hfe-site-logo">
-<a class="elementor-clickable" data-elementor-open-lightbox="" href="https://sympler.com"> <div class="hfe-site-logo-set">
-<div class="hfe-site-logo-container">
-<img alt="HAMAD Studio---white-logo" class="hfe-site-logo-img hide_logo_desktop" src="https://sympler.com/wp-content/uploads/2023/12/HAMAD Studio-white-logo.png"/>
-<img alt="HAMAD Studio---white-logo" class="hfe-site-sticky-logo-img" src="https://sympler.com/wp-content/uploads/2023/12/HAMAD Studio-white-logo.png"/>
-<img alt="HAMAD Studio---Black-logo" class="hfe-dark-logo-img" src="https://sympler.com/wp-content/uploads/2023/12/HAMAD Studio-Black-logo.png"/>
-</div>
-</div>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-44a116a e-con-full e-flex e-con e-child" data-element_type="container" data-id="44a116a">
-<div class="elementor-element elementor-element-85c9d0d hfe-nav-menu__align-right hfe-nav-menu__align-right elementor-widget elementor-widget-navigation-menu" data-element_type="widget" data-id="85c9d0d" data-settings='{"padding_horizontal_menu_item":{"unit":"px","size":9,"sizes":[]},"padding_vertical_menu_item":{"unit":"px","size":"","sizes":[]},"menu_row_space":{"unit":"px","size":"","sizes":[]},"width_dropdown_item":{"unit":"px","size":"","sizes":[]},"padding_vertical_dropdown_item":{"unit":"px","size":"","sizes":[]},"padding_horizontal_menu_item_tablet":{"unit":"px","size":"","sizes":[]},"padding_horizontal_menu_item_mobile":{"unit":"px","size":"","sizes":[]},"padding_vertical_menu_item_tablet":{"unit":"px","size":"","sizes":[]},"padding_vertical_menu_item_mobile":{"unit":"px","size":"","sizes":[]},"menu_space_between":{"unit":"px","size":"","sizes":[]},"menu_space_between_tablet":{"unit":"px","size":"","sizes":[]},"menu_space_between_mobile":{"unit":"px","size":"","sizes":[]},"menu_row_space_tablet":{"unit":"px","size":"","sizes":[]},"menu_row_space_mobile":{"unit":"px","size":"","sizes":[]},"meniu_border_radius":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"meniu_border_radius_tablet":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"meniu_border_radius_mobile":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"dropdown_border_radius":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"dropdown_border_radius_tablet":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"dropdown_border_radius_mobile":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"width_dropdown_item_tablet":{"unit":"px","size":"","sizes":[]},"width_dropdown_item_mobile":{"unit":"px","size":"","sizes":[]},"padding_horizontal_dropdown_item":{"unit":"px","size":"","sizes":[]},"padding_horizontal_dropdown_item_tablet":{"unit":"px","size":"","sizes":[]},"padding_horizontal_dropdown_item_mobile":{"unit":"px","size":"","sizes":[]},"padding_vertical_dropdown_item_tablet":{"unit":"px","size":"","sizes":[]},"padding_vertical_dropdown_item_mobile":{"unit":"px","size":"","sizes":[]}}' data-widget_type="navigation-menu.default">
-<div class="elementor-widget-container">
-<div class="menu-area horizontal separator_ primary-menu-icon">
-<div class="menu_one icon2">
-<div class="col-cell menu-responsive primary-menu right_icon_ left_icon_">
-<nav class="nav navbar">
-<div class="navbar-menu">
-<ul class="menu" id="menu-main-menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-16364 current_page_item menu-item-17">
-<a aria-current="page" href="https://sympler.com/">                                    Home
-</a>
-</li>
-<li class="mega menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8954">
-<a href="#">                                    Our Solutions
-</a>
-<ul class="sub-menu">
-<li class="mega-labels menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36162">
-<a>                                        AI-Powered SEO
-</a>
-<ul class="sub-menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12507">
-<a href="https://sympler.com/ai-seo/">                                            Ai SEO
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8952">
-<a href="https://sympler.com/local-seo/">                                            Local SEO
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38">
-<a href="https://sympler.com/enterprise-seo/">                                            Enterprise SEO
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16470">
-<a href="https://sympler.com/reputation-seo/">                                            Reputation SEO
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16475">
-<a href="https://sympler.com/content-seo/">                                            Content SEO
-</a>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36286">
-<a href="#">                                            Affiliate Partnerships
-</a>
-</li>
-</ul>
-</li>
-<li class="mega-labels menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36164">
-<a>                                        Programmatic Display
-</a>
-<ul class="sub-menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16526">
-<a href="https://sympler.com/ctv-ott-advertising/">                                            CTV &amp; OTT Advertising
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16541">
-<a href="https://sympler.com/display-ads/">                                            Display Ads
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16575">
-<a href="https://sympler.com/online-video-advertising/">                                            Online Video Advertising
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16574">
-<a href="https://sympler.com/retargeting-ads/">                                            Retargeting Ads
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16573">
-<a href="https://sympler.com/geo-fencing-ads/">                                            Geo-Fencing Ads
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16572">
-<a href="https://sympler.com/video-geo-fencing/">                                            Video Geo-Fencing
-</a>
-</li>
-</ul>
-</li>
-<li class="mega-labels menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36163">
-<a>                                        Paid Advertising
-</a>
-<ul class="sub-menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40">
-<a href="https://sympler.com/paid-advertising/">                                            Paid Advertising
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11914">
-<a href="https://sympler.com/social-media-advertising/">                                            Social Media Advertising
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16496">
-<a href="https://sympler.com/amazon-advertising/">                                            Amazon Advertising
-</a>
-</li>
-</ul>
-</li>
-<li class="mega-labels menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15350">
-<a>                                        Branding &amp; Websites
-</a>
-<ul class="sub-menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10299">
-<a href="https://sympler.com/websites/">                                            Website Development
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36451">
-<a href="https://sympler.com/ai-chatbot/">                                            AI Chatbot
-</a>
-</li>
-</ul>
-</li>
-<li class="mega-labels menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36449">
-<a>                                        Ai Chat Bot
-</a>
-<ul class="sub-menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36450">
-<a href="https://sympler.com/ai-chatbot/">                                            AI Chatbot
-</a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13218">
-<a href="https://sympler.com/case-studies/">                                    Case Studies
-</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19">
-<a href="https://sympler.com/about/">                                    About
-</a>
-<ul class="sub-menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36466">
-<a href="https://sympler.com/blog/">                                        Blog
-</a>
-</li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
-<a href="https://sympler.com/contact-us/">                                    Contact
-</a>
-</li>
-</ul>
-</div>
+
+
+<div class="custom-hero-wrapper">
+<header class="custom-header">
+<div class="logo">
+<svg fill="none" height="32" style="margin-right:10px;" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#614CE1" height="32" rx="8" width="32"></rect>
+<path d="M16 10C12.6863 10 10 12.6863 10 16C10 19.3137 12.6863 22 16 22C19.3137 22 22 19.3137 22 16C22 12.6863 19.3137 10 16 10ZM16 20C13.7909 20 12 18.2091 12 16C12 13.7909 13.7909 12 16 12C18.2091 12 20 13.7909 20 16C20 18.2091 18.2091 20 16 20Z" fill="white"></path>
+</svg>
+            HAMAD Studio
+        </div>
+<nav>
+<a class="active" href="#"><span style="background:#614CE1; color:white; padding:4px 12px; border-radius:20px;">Home</span></a>
+<a href="#">Features</a>
+<a href="#">About Us</a>
+<a href="#">Pages</a>
+<a href="#">Contact</a>
 </nav>
-</div>
-<div class="sidebarmenu-area text-right mobilehum primary-menu">
-<ul class="offcanvas-icon layout-1">
-<li class="nav-link-container center">
-<a class="nav-menu-link menu-button" href="#"> <svg fill="none" height="16" viewbox="0 0 20 16" width="20" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#ffffff" height="2" width="18" y="14">
-</rect>
-<rect fill="#ffffff" height="2" width="18" y="7">
-</rect>
-<rect fill="#ffffff" height="2" width="18">
-</rect>
-</svg>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-9597bf3 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-element_type="container" data-id="9597bf3">
-<div class="elementor-element elementor-element-ff89a13 e-con-full e-flex e-con e-child" data-element_type="container" data-id="ff89a13">
-<div class="elementor-element elementor-element-5ea5b7a elementor-hidden-mobile elementor-widget elementor-widget-topbar-icon-list" data-element_type="widget" data-id="5ea5b7a" data-widget_type="topbar-icon-list.default">
-<div class="elementor-widget-container">
-<div class="rt-features-list-content">
-<ul class="rt-features-list separator_no border_no rotate_no">
-<li>
-<div class="icon">
-<i class="rt-phone-flip"></i>
-</div>
-<div class="query-list">
-<a href="tel:986-229-5000"> <span class="text-heading">                                986-229-5000
-</span>
-</a>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-1ab15ee e-grid-align-right elementor-widget__width-inherit elementor-hidden-tablet elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-element_type="widget" data-id="1ab15ee" data-widget_type="social-icons.default">
-<div class="elementor-widget-container">
-<div class="elementor-social-icons-wrapper elementor-grid" role="list">
-<span class="elementor-grid-item" role="listitem"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-animation-shrink elementor-repeater-item-87a7c2a" href="https://www.linkedin.com/company/symplerai" target="_blank"> <span class="elementor-screen-only">                          Linkedin
-</span>
-<svg aria-hidden="true" class="e-font-icon-svg e-fab-linkedin" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-<path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
-</path>
-</svg>
-</a>
-</span>
-<span class="elementor-grid-item" role="listitem"> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-8935352" href="https://www.instagram.com/wearesympler/?igsh=MWt2aTk3cmFvZWkzYQ%3D%3D&amp;utm_source=qr#" target="_blank"> <span class="elementor-screen-only">                          Instagram
-</span>
-<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-</path>
-</svg>
-</a>
-</span>
-<span class="elementor-grid-item" role="listitem"> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-shrink elementor-repeater-item-9cf1ec5" href="https://www.facebook.com/wearesympler" target="_blank"> <span class="elementor-screen-only">                          Facebook-f
-</span>
-<svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-f" viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-<path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-</path>
-</svg>
-</a>
-</span>
-<span class="elementor-grid-item" role="listitem"> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-animation-shrink elementor-repeater-item-d347314" href="https://www.youtube.com/@symplerdigitalmarketing" target="_blank"> <span class="elementor-screen-only">                          Youtube
-</span>
-<svg aria-hidden="true" class="e-font-icon-svg e-fab-youtube" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-<path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-</path>
-</svg>
-</a>
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-d660b74 e-con-full e-flex e-con e-child" data-element_type="container" data-id="d660b74">
-<div class="elementor-element elementor-element-e6b92b0 elementor-hidden-mobile elementor-widget elementor-widget-react-button" data-element_type="widget" data-id="e6b92b0" data-widget_type="react-button.default">
-<div class="elementor-widget-container">
-<div class="react-button primary_btn">
-<a class="react_button" href="https://sympler.com/free-analysis/"> <span class="btn_text">                          Free Audit
-</span>
-<i aria-hidden="true" class="rt rt-arrow-up-right"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<a class="buy-btn" href="#">Start Project</a>
 </header>
+<section class="custom-hero">
+<div class="badge">
+<div class="icon">i</div> About Us
+        </div>
+<h1>For Those Who Value<br/>Unique Perspectives.</h1>
+<p class="subtitle">Our AI solutions help you write smarter, increase productivity, and improve clarity—all while staying simple.</p>
+<div class="hero-grid">
+<div class="large-img">
+<img alt="Hero Image 1" src="./assets/hero1.png"/>
+</div>
+<div class="right-col" style="display:flex; flex-direction:column; gap:20px;">
+<div class="small-img">
+<img alt="Hero Image 2" src="./assets/hero2.png"/>
+</div>
+<div class="stats-row">
+<div class="stat-card purple">
+<div class="label">Predict bottlenecks and<br/>optimize team</div>
+<div class="value">98%</div>
+<div class="desc">AI-Driven Insights</div>
+</div>
+<div class="stat-card white">
+<div class="label">Monitor performance and make<br/>instant decisions</div>
+<div class="value">95%</div>
+<div class="desc">Real-Time Analytics</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-text">
+<h3>Innovative Ideas Can<br/>Boost Sales Growth.</h3>
+<div class="text-content">
+<p>A strong idea can spark rapid sales growth by uncovering hidden opportunities, optimizing processes, or changing how teams connect with potential clients.</p>
+<p>When supported by data and fueled by creativity, a single strategic insight can simplify complexities.</p>
+</div>
+</div>
+</section>
+</div>
 <div class="main-contain offcontents">
 <div class="container-full-width">
 <div id="content">
 <div class="elementor elementor-16364" data-elementor-id="16364" data-elementor-post-type="page" data-elementor-type="wp-page">
-<div class="elementor-element elementor-element-6e32ffe e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="6e32ffe">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-c0ce7e6 elementor-widget__width-initial elementor-absolute light_shadow elementor-widget elementor-widget-react-gradient" data-element_type="widget" data-id="c0ce7e6" data-settings='{"_position":"absolute"}' data-widget_type="react-gradient.default">
-<div class="elementor-widget-container">
-<style>
-                        .box-one-top {
-		    height: 622px;
-		    width: 622px;
-		    border-radius: 50px;
-		    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #36D659;
-		    filter: blur(200px);
-		    z-index: -1;
-		}
-		.box-one-bottom {
-		    height: 622px;
-		    width: 622px;
-		    border-radius: 50px;
-		    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #614CE1;
-		    filter: blur(200px);
-		    z-index: -1;
-		}
-                      </style>
-<div class="box-one-bottom">
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-4ace694 elementor-widget__width-initial elementor-absolute light_shadow elementor-widget elementor-widget-react-gradient" data-element_type="widget" data-id="4ace694" data-settings='{"_position":"absolute"}' data-widget_type="react-gradient.default">
-<div class="elementor-widget-container">
-<style>
-                        .box-one-top {
-		    height: 622px;
-		    width: 622px;
-		    border-radius: 50px;
-		    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #36D659;
-		    filter: blur(200px);
-		    z-index: -1;
-		}
-		.box-one-bottom {
-		    height: 622px;
-		    width: 622px;
-		    border-radius: 50px;
-		    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #614CE1;
-		    filter: blur(200px);
-		    z-index: -1;
-		}
-                      </style>
-<div class="box-one-bottom">
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-f9e0dff elementor-widget__width-initial elementor-absolute dark_shadow elementor-widget elementor-widget-rt-react-image" data-element_type="widget" data-id="f9e0dff" data-settings='{"_position":"absolute"}' data-widget_type="rt-react-image.default">
-<div class="elementor-widget-container">
-<div class="react-image">
-<img alt="image" class="react-multi-image image-scale" decoding="async" src="https://themewant.com/products/wordpress/fluxi/wp-content/uploads/2024/01/dark-blur-circle-right.png"/>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-5800b49 e-con-full e-flex e-con e-child" data-element_type="container" data-id="5800b49">
-<div class="elementor-element elementor-element-4e911d8 elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-react-heading" data-element_type="widget" data-id="4e911d8" data-widget_type="react-heading.default">
-<div class="elementor-widget-container">
-<div class="animation-style2 react-heading default title-border-no">
-<div class="title-inner no">
-<div class="split_collab_words">
-<h2 class="title word-line">
-                                We Help
-                                <span>                                Your Business
-</span>
-                                Grow Online
-                              </h2>
-</div>
-</div>
-<div class="description">
-<p>
-                              At HAMAD Studio, we design modern websites, strong brand identities, and high-converting digital experiences that help businesses look premium, build trust, and get more clients online.
-                            </p>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-40fa55a e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="40fa55a">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-c15a6df elementor-widget__width-initial elementor-widget elementor-widget-react-button" data-element_type="widget" data-id="c15a6df" data-widget_type="react-button.default">
-<div class="elementor-widget-container">
-<div class="react-button primary_btn">
-<a class="react_button" href="https://sympler.com/free-analysis/"> <span class="btn_text">                              Get Started
-</span>
-</a>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-ff58271 elementor-widget__width-inherit elementor-widget elementor-widget-react-button" data-element_type="widget" data-id="ff58271" data-widget_type="react-button.default">
-<div class="elementor-widget-container">
-<div class="rt_btn_render btn_style_5">
-<a class="under-line-btn" href="tel:986-229-5000"> <!-- <i class="fa-solid fa-arrow-up-right"></i> -->
-<span class="btn_text">                              Call Us  -  986-229-5000
-</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-ecb83b3 e-con-full elementor-hidden-tablet e-flex e-con e-child" data-element_type="container" data-id="ecb83b3">
-<div class="elementor-element elementor-element-aaa240d elementor-widget elementor-widget-rt-react-image" data-element_type="widget" data-id="aaa240d" data-widget_type="rt-react-image.default">
-<div class="elementor-widget-container">
-<div class="react-image no">
-<img alt="image" class="react-multi-image image-scale" decoding="async" src="./hero_image.png"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 <div class="elementor-element elementor-element-b8b4a95 e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="b8b4a95">
 <div class="e-con-inner">
 <div class="elementor-element elementor-element-fd4928f e-con-full e-flex e-con e-child" data-element_type="container" data-id="fd4928f">
